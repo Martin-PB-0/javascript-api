@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(216, 37, 37);
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+
+        function hunter(obj) {
+            document.addEventListener('click', function(e) {
+                var x = e.pageX;
+                var y = e.pageY;
+                clearInterval(obj.timerX);
+                clearInterval(obj.timerY);
+                obj.timerX = setInterval(function() {
+                    var objX = obj.offsetLeft + obj.offsetWidth / 2;
+                    if (objX == x) {
+                        clearInterval(obj.timerX)
+                    } else if (objX < x) {
+                        obj.style.left = obj.offsetLeft + 1 + 'px';
+                    } else {
+                        obj.style.left = obj.offsetLeft - 1 + 'px';
+                    }
+                }, 10)
+                obj.timerY = setInterval(function() {
+                    var objY = obj.offsetTop + obj.offsetHeight / 2;
+                    if (objY == y) {
+                        clearInterval(obj.timerY)
+                    } else if (objY < y) {
+                        obj.style.top = obj.offsetTop + 1 + 'px';
+                    } else {
+                        obj.style.top = obj.offsetTop - 1 + 'px';
+                    }
+                }, 10)
+
+            })
+
+        }
+        hunter(box);
+    </script>
+</body>
+
+</html>

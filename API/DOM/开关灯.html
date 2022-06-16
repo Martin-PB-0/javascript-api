@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="turn">关灯</button>
+    <script>
+        var bodyObj = document.body;
+        var btn = document.querySelector('#turn');
+        var flag = 0;
+        btn.onclick = function() {
+            if (flag == 0) {
+                bodyObj.style.backgroundColor = '#000';
+                btn.innerHTML = '开灯';
+                flag = 1;
+            } else {
+                bodyObj.style.backgroundColor = '#fff';
+                btn.innerHTML = '关灯';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

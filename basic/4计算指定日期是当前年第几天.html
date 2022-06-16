@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getDayNum(date) {
+            var arr = date.split('-');
+            var y = new Date(arr[0], 0, 0); //计算该年的总毫秒数
+            var m = new Date(arr[0], arr[1] - 1, arr[2]); //计算该年月日的总毫秒数
+            var day = Math.floor((m - y) / (24 * 60 * 60 * 1000)); //计算第几天
+            console.log(y);
+            return day;
+        }
+        var date = '2019-1-4';
+        console.log(getDayNum(date));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

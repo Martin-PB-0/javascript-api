@@ -1,0 +1,251 @@
+.header {
+	height: 70px;
+	border-bottom: 2px solid #b1191a;
+	padding-top: 15px;
+}
+.registerarea {
+	height: 520px;
+	border: 1px solid #dfdfdf;
+}
+.registerarea h3 {
+	height: 40px;
+	border-bottom: 1px solid #dfdfdf;
+	background-color: #ececec;
+	margin-top: 20px;
+	line-height: 40px;
+	color: #333;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 0 10px;
+}
+.registerarea h3 span {
+	float: right;
+	font-size: 14px;
+}
+.registerarea h3 span a {
+	color: #c81623;
+}
+.registerarea h3 span a:hover {
+    color: #e33333;
+}
+.reg-form {
+	width: 620px;
+	margin: 50px auto;
+	color: #4c4c4c;
+}
+.reg-form li {
+	margin-top: 20px;
+}
+.reg-form label {
+	display: inline-block;
+	width: 100px;
+	height: 36px;
+	line-height: 36px;
+	text-align: right;
+	font-size: 14px;
+}
+.reg-form input {
+	width: 218px;
+	height: 34px;
+	border: 1px solid #999;
+	padding: 0 10px;
+	margin: 0 10px;
+}
+.reg-form .error {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/error.png) no-repeat;
+	vertical-align: middle;
+}
+.reg-form span {
+	color: #df3033;
+}
+.reg-form .passw-safe {
+	padding-left: 186px;
+	color: #b2b2b2;
+	margin-top: 5px;
+}
+.reg-form .safe_ruo {
+	padding: 0 10px;
+	background-color: #de1111;
+	color: #fff;
+}
+.reg-form .safe_zhong {
+	padding: 0 10px;
+	background-color: #f79100;
+	color: #fff;
+}
+.reg-form .safe_qiang {
+	padding: 0 10px;
+	background-color: #40b83f;
+	color: #fff;
+}
+/*.reg-form .agreement {
+	padding-left: 100px; 
+}*/
+.reg-form .agreement input {
+	width: 14px;
+	height: 14px;
+	margin-left: 120px;
+}
+.reg-form .agreement a {
+	color: #1ba1e6;
+}
+.reg-success input {
+	margin-left: 120px;
+	width: 200px;
+	height: 34px;
+	border: none;
+	background-color: #c81623;
+	color: #fff;
+	cursor: pointer;
+}
+/*footer部分*/
+.footer {
+	background-color: #f5f5f5;
+	padding-top: 30px;
+}
+.service {
+	height: 79px;
+	border-bottom: 1px solid #ededed;
+}
+.service_items {
+	float: left;
+	width: 203px;
+	height: 79px;
+	padding-left: 37px;
+}
+.service_items_common {
+	float: left;
+	width: 50px;
+	height: 50px;
+	background:  url(../images/icons.png) no-repeat;
+}
+.service_items_zheng {
+	background-position: -253px -3px;
+}
+.service_items_kuai {
+	background-position: -253px -54px;
+}
+.service_items_bao {
+	background-position: -253px -106px;
+}
+.service_items_te {
+	background-position: -253px -157px;
+}
+.service_items_bang {
+	background-position: -253px -209px;
+}
+.service_items h5 {
+	padding-top: 7px;
+	color: #333;
+	font-size: 14px;
+	line-height: 20px;
+}
+.service_items p {
+	font-size: 12px;
+	color: #666;
+}
+.help {
+	height: 189px;
+	border-bottom: 1px solid #ededed;
+}
+.help dl {
+	float: left;
+	width: 150px;
+	padding: 20px 0 0 50px;
+}
+.help dl dt {
+	color: #333;
+	font-size: 16px;
+	line-height: 28px;
+}
+.help dl dd {
+	color: #666;
+	font-size: 12px;
+	line-height: 22px;
+}
+.help .qrcode dd {
+	width: 96px;
+	height: 96px;
+	background:  url(../images/QR-code.png) 0 0 no-repeat;
+}
+.help .qrcode dt {
+	padding-left: 18px;
+}
+.help .qrcode p {
+	padding-left: 14px;
+	line-height: 24px;
+}
+.copyright {
+	padding: 15px 0 30px;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+.copyright_links {
+	line-height: 30px;
+}
+.copyright_links .gap {
+	padding: 0 15px;
+}
+.copyright_info {
+	line-height: 20px;
+}
+.page {
+	text-align: center;
+	margin: 40px 0;
+}
+.page_num a {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+	background-color: #f7f7f7;
+	text-align: center;
+}
+.page_num .page_prev,
+.page_num .page_next {
+	width: 84px;
+	height: 38px;
+	border: 1px solid #ddd;
+	background-color: #f7f7f7;
+	vertical-align: bottom;
+}
+.page_num .arrow-l,
+.page_num .arrow-r {
+	font-family: 'icomoon';
+	font-size: 16px;
+	vertical-align: bottom;
+}
+.page_num a:hover {
+	border: 1px solid transparent;
+	background-color: #fff;
+}
+.page_num .potted {
+	border: 1px solid transparent;
+	background-color: #fff;
+}
+.page_kip {
+	margin-left: 40px;
+	font-size: 14px;
+}
+.page_kip input {
+	width: 38px;
+	height: 38px;
+	border: 1px solid #ddd;
+	text-align: center;
+	transition: all .3s
+}
+.page_kip input:focus {
+	width: 60px;
+	border: 1px solid #476fca;
+}
+.page_kip button {
+	width: 54px;
+	height: 38px;
+	border: 1px solid #ddd;
+	background-color: #f7f7f7;
+}

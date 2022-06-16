@@ -1,0 +1,119 @@
+.header {
+	position: relative;
+}
+.sk {
+	position: absolute;
+	top: 40px;
+	left: 185px;
+	display: table;
+	width: 60px;
+	height: 34px;
+	padding:2px 0 2px 10px;
+	border-left: 1px solid #c81523;
+}
+.sk_nav {
+	height: 45px;
+	line-height: 45px;
+}
+.sk_list li {
+	float: left;
+	padding: 0 26px;
+}
+.sk_list li a {
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+}
+.sk_list li a:hover,
+.sk_nav .nav_con li a:hover {
+	color: #e33333;
+}
+.sk_nav .nav_con li {
+	float: left;
+	padding: 0 22px;
+}
+.sk_nav .nav_con li a {
+	font-size: 14px;
+	color: #666;
+}
+.nav_con .arrow-d {
+	font-family: 'icomoon';
+	font-size: 18px;
+	line-height: 25px;
+}
+.phone_bd ul {
+	width: 1210px;
+}
+.phone_bd li {
+	position: relative;
+	float: left;
+	width: 268px;
+	height: 460px;
+	border: 1px solid transparent;
+	padding: 0 10px;
+	margin: 22px 12px 0 0;
+}
+.phone_bd li img {
+	margin: 15px 70px ;
+}
+.phone_bd li h5 {
+	font-size: 14px;
+	color: #666;
+	font-weight: 400;
+}
+.phone_bd li h5 a:hover {
+	color: #e33333;
+} 
+.goods_price {
+	font-weight: 600;
+	padding: 10px 0 5px;
+}
+.goods_price em {
+	font-size: 22px;
+	color: #e60012;
+}
+.goods_price del {
+	font-size: 14px;
+	color: #a4a4a4;
+}
+.goods_progress {
+	font-size: 14px;
+	color: #666;
+	padding-bottom: 10px;
+}
+.goods_progress i {
+	font-size: 16px;
+	color: #e12228;
+}
+.sell_bar {
+	display: inline-block;
+	width: 132px;
+	height: 12px;
+	border-radius: 6px;
+	border: 1px solid #ed282e;
+	background-color: #fff;
+}
+.sell_barin {
+	width: 87%;
+	height: 12px;
+	background-color: #ed282e;
+}
+.goods_buy {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 288px;
+	background-color: #b1191a;
+	color: #fff;
+	font-size: 20px;
+}
+.goods_buy:hover {
+	color: #000;
+}
+.phone_bd li:hover {
+	border: 1px solid #b1191a;
+}

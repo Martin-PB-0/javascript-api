@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        
+        .banner i {
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <a href="javascript:;" title="泸州老窖"><img src="images/luzhou.jpg" alt="泸州老窖"></a>
+        <i><img src="images/close.jpg" alt=""></i>
+    </div>
+    <script>
+        var bannerBox = document.querySelector('.banner');
+        var bannerClose = document.querySelector('.banner').querySelector('i');
+        bannerClose.onclick = function() {
+            bannerBox.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+        
+        table {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        table tr {
+            height: 30px;
+        }
+        
+        table thead {
+            background-color: rgb(89, 129, 216);
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        table tbody {
+            background-color: rgb(231, 227, 227);
+        }
+        
+        table tbody th {
+            width: 100px;
+            font-weight: 400;
+        }
+        
+        table td {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="iuputarea">
+            <p>请输入姓名：<input type="text" placeholder="小白" id="inputName"></p>
+            <p>请输入邮箱：<input type="text" placeholder="xiaobai@itcast.cn" id="email"></p>
+        </div>
+        <button>添加</button>
+        <table border="1" cellspacing='0' cellpadding="0">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <td>邮箱</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <th>小黑</th>
+                    <td>xiaohei@123.com</td>
+                </tr>
+                <tr>
+                    <th>小白</th>
+                    <td>xiaobai@itcast.cn</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var tbodyObj = document.getElementById('tbody');
+        btn.onclick = function() {
+            var inputNameObj = document.getElementById('inputName');
+            var emailObj = document.getElementById('email');
+            if (inputNameObj.value == '' || emailObj.value == '') {
+                alert('请将数据填入完全!')
+            }
+            var trObj = document.createElement('tr');
+            tbodyObj.appendChild(trObj);
+            var thObj = document.createElement('th');
+            trObj.appendChild(thObj);
+            var tdObj = document.createElement('td');
+            trObj.appendChild(tdObj);
+            thObj.innerHTML = inputNameObj.value;
+            tdObj.innerHTML = emailObj.value;
+        }
+    </script>
+</body>
+
+</html>

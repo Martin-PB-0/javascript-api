@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var color10 = Math.floor(Math.random() * (15 * 15 * 15 * 15 * 15 * 15 + 1)) + 0;
+        var color16 = color10.toString(16)
+        color16 = color16.length > 5 ? color16 : '0' + color16;
+        console.log('#' + color16);
+        // 定义一个函数，实现随机生成十六进制颜色值
+
+                    
+        function getColor() {              // 定义字符串变量 colorValue 存放可以构成十六进制颜色值的值
+                         
+            var colorValue = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";              // 以 "," 为分隔符，将 colorValue 字符串分割为字符数组 ["0","1",...,"f"]
+                         
+            var colorArray = colorValue.split(",");              
+            var color = "#"; // 定义一个存放十六进制颜色值的字符串变量，先将 #存放进去
+                           // 使用 for 循环语句生成剩余的六位十六进制值
+                          
+            for (var i = 0; i < 6; i++) {                 //colorArray [Math.floor (Math.random ()*16)] 随机取出
+                                 // 由 16 个元素组成的 colorArray 的某一个值，然后将其加在 color 中，
+                                 // 字符串相加后，得出的仍是字符串
+                                
+                color += colorArray[Math.floor(Math.random() * 16)];              
+            }              
+            return color;           
+        }
+
+                   // 测试函数
+
+                    
+        console.log(getColor());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

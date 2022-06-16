@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input_text {
+            border: 1px solid #D9D9D9;
+            outline: none;
+            color: #bbb;
+        }
+        
+        .input_text_onfocus {
+            border: 1px solid #5a5858;
+            outline: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="input_text" type="text" value="邮箱/ID/手机号" id="username">
+    <script>
+        var inputName = document.getElementById('username');
+        inputName.onfocus = function() {
+            inputName.value = '';
+            inputName.className = 'input_text_onfocus';
+        }
+        inputName.onblur = function() {
+            if (inputName.value == '') {
+                inputName.value = '邮箱/ID/手机号';
+                inputName.className = 'input_text';
+            }
+        }
+    </script>
+</body>
+
+</html>

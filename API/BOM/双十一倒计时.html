@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双十一倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .double-eleven {
+            margin: 100px auto;
+            width: 500px;
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid #FF9F00;
+        }
+        
+        .double-eleven p {
+            display: block;
+            margin: 30px 0;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .cutdown {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .cutdown li {
+            font-size: 25px;
+            width: 90px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #FF9F00;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 600;
+        }
+        
+        .cutdown li:first-child {
+            color: #FF9F00;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="double-eleven">
+        <p>距离光棍节，还有</p>
+        <ul class="cutdown">
+            <li>
+                <span id="days"></span><span>天</span>
+            </li>
+            <li>
+                <span id="hours"></span><span>时</span>
+
+            </li>
+            <li>
+                <span id="minutes"></span><span>分</span>
+
+            </li>
+            <li>
+                <span id="secends"></span><span>秒</span>
+
+            </li>
+        </ul>
+    </div>
+    <script>
+        var days = document.querySelector('#days');
+        var hours = document.querySelector('#hours');
+        var mins = document.querySelector('#minutes');
+        var secends = document.querySelector('#secends');
+
+        countdown();
+        setInterval(countdown, 1000);
+
+        function countdown() {
+            // 获取现在时间必须放在回调函数里面,才能不断重复获取时间
+            var nowTime = new Date();
+            var now = nowTime.getTime();
+            var endTime = new Date('2021-11-11 0:0:0');
+            // 时间参数为字符串，加引号，短横线两边不带空格
+            var end = endTime.getTime();
+            var gap = end - now;
+            // 不获取毫秒数,直接用endTime-nowTime也可
+            var d = Math.floor(gap / 1000 / 60 / 60 / 24);
+            var h = Math.floor(gap / 1000 / 60 / 60 % 24);
+            var m = Math.floor(gap / 1000 / 60 % 60);
+            var s = Math.floor(gap / 1000 % 60);
+            days.innerHTML = d;
+            hours.innerHTML = h;
+            mins.innerHTML = m;
+            secends.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

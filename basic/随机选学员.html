@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 从以下学员名单中随机选出4个学员：
+        var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+        var newArr = [];
+
+        function getPerson(num) {
+            for (var i = 0; i < num; i++) {
+                var k = Math.floor(Math.random() * (arr.length - i - 1 + 1));
+                newArr[i] = arr[k];
+                arr.splice(k, 1);
+            }
+            return newArr;
+        }
+        getPerson(4);
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

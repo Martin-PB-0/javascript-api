@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .current {
+            background-color: #a81f1f;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="girls">
+        <ul id="girlname">
+            <li>西施</li>
+            <li>貂蝉</li>
+            <li>昭君</li>
+            <li>凤姐</li>
+            <li>芙蓉姐姐</li>
+        </ul>
+        <button>新增</button>
+    </div>
+    <script>
+        var girlsObj = document.querySelector('#girlname')
+        var lisObj = document.querySelectorAll('li');
+        var btnObj = document.querySelector('button');
+        btnObj.addEventListener('click', function() {
+            var liObj = document.createElement('li');
+            girlsObj.insertBefore(liObj, girlsObj.children[0]);
+            liObj.innerHTML = '杨超越'
+        });
+        girlsObj.addEventListener('click', function(e) {
+            for (var i = 0; i < lisObj.length; i++) {
+                lisObj[i].style.backgroundColor = '#fff';
+            }
+            e.target.style.backgroundColor = '#a81f1f';
+        }, true)
+    </script>
+</body>
+
+</html>

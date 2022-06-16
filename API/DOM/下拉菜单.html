@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            list-style: none;
+        }
+        
+        .weibo {
+            width: 100px;
+            margin-left: 50px;
+        }
+        
+        .nav_tab_list li {
+            position: relative;
+            width: 80px;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+        
+        .nav_tab_list li::after {
+            content: '';
+            position: absolute;
+            right: 26px;
+            top: 21px;
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: url(images/icon.png) no-repeat 0 -975px;
+            transform: scale(2);
+        }
+        
+        .nav_tab_list li:hover {
+            color: #ff8400;
+        }
+        
+        .nav_tab_con {
+            display: none;
+        }
+        
+        .nav_tab_con li {
+            width: 98px;
+            height: 29px;
+            border: 1px solid #ff8400;
+            border-top: none;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="weibo">
+            <ul class="nav_tab_list">
+                <li>微博</li>
+            </ul>
+            <ul class="nav_tab_con">
+                <li>私信</li>
+                <li>评论</li>
+                <li>@我</li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        var weibo = document.querySelector('.weibo');
+        var weiboObj = document.querySelector('.nav_tab_list').querySelector('li');
+        var weiboCon = document.querySelector('.nav_tab_con');
+        var weiboList = weiboCon.querySelectorAll('li');
+        weibo.onmouseover = function() {
+            weiboObj.style.backgroundColor = '#EbEBEB';
+            weiboCon.style.display = 'block';
+        }
+        weibo.onmouseout = function() {
+            weiboObj.style.backgroundColor = '';
+            weiboCon.style.display = 'none';
+        }
+        for (var i = 0; i < weiboList.length; i++) {
+            weiboList[i].onmouseover = function() {
+                this.style.color = '#ff8400';
+                this.style.backgroundColor = '#fff5da';
+            }
+            weiboList[i].onmouseout = function() {
+                this.style.color = '#4c4c4c';
+                this.style.backgroundColor = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
